@@ -1,0 +1,85 @@
+Molecule_Name,SMILES,logP,MW,HBD,HBA,TPSA,RotB,Fabric_Type,Fabric_Weave,Fabric_Density,Absorbency,Suggested_Application,Repellency
+DEET,CCN(CC)C(C)=O,2.5,191,0,1,17.1,3,Cotton,Woven,150,0.8,Spray,0.92
+DEET,CCN(CC)C(C)=O,2.5,191,0,1,17.1,3,Polyester,Knit,120,0.4,Spray,0.9
+DEET,CCN(CC)C(C)=O,2.5,191,0,1,17.1,3,Nylon,Woven,130,0.5,Spray,0.91
+DEET,CCN(CC)C(C)=O,2.5,191,0,1,17.1,3,Silk,Woven,90,0.6,Embedded,0.88
+DEET,CCN(CC)C(C)=O,2.5,191,0,1,17.1,3,Wool,Knit,140,0.7,Thick coating,0.89
+DEET,CCN(CC)C(C)=O,2.5,191,0,1,17.1,3,Linen,Woven,110,0.6,Spray,0.9
+DEET,CCN(CC)C(C)=O,2.5,191,0,1,17.1,3,Cotton-Blend,Knit,140,0.7,Spray,0.91
+Citronella,CC1=CC=C(C=C1)C(C)=O,3.2,150,1,1,21,3,Cotton,Woven,150,0.8,Spray,0.85
+Citronella,CC1=CC=C(C=C1)C(C)=O,3.2,150,1,1,21,3,Polyester,Knit,120,0.4,Spray,0.83
+Citronella,CC1=CC=C(C=C1)C(C)=O,3.2,150,1,1,21,3,Nylon,Woven,130,0.5,Spray,0.84
+Citronella,CC1=CC=C(C=C1)C(C)=O,3.2,150,1,1,21,3,Silk,Woven,90,0.6,Embedded,0.82
+Citronella,CC1=CC=C(C=C1)C(C)=O,3.2,150,1,1,21,3,Wool,Knit,140,0.7,Thick coating,0.83
+Citronella,CC1=CC=C(C=C1)C(C)=O,3.2,150,1,1,21,3,Linen,Woven,110,0.6,Spray,0.84
+Citronella,CC1=CC=C(C=C1)C(C)=O,3.2,150,1,1,21,3,Cotton-Blend,Knit,140,0.7,Spray,0.84
+Lemongrass_Oil,CC1=C(C=CC(=C1)O)C,3.1,150,1,1,21,3,Cotton,Woven,150,0.8,Spray,0.83
+Lemongrass_Oil,CC1=C(C=CC(=C1)O)C,3.1,150,1,1,21,3,Polyester,Knit,120,0.4,Spray,0.81
+Lemongrass_Oil,CC1=C(C=CC(=C1)O)C,3.1,150,1,1,21,3,Nylon,Woven,130,0.5,Spray,0.82
+Lemongrass_Oil,CC1=C(C=CC(=C1)O)C,3.1,150,1,1,21,3,Silk,Woven,90,0.6,Embedded,0.8
+Lemongrass_Oil,CC1=C(C=CC(=C1)O)C,3.1,150,1,1,21,3,Wool,Knit,140,0.7,Thick coating,0.81
+Lemongrass_Oil,CC1=C(C=CC(=C1)O)C,3.1,150,1,1,21,3,Linen,Woven,110,0.6,Spray,0.82
+Lemongrass_Oil,CC1=C(C=CC(=C1)O)C,3.1,150,1,1,21,3,Cotton-Blend,Knit,140,0.7,Spray,0.82
+Permethrin,CC(C)=CCC=C(C)C,4,204,0,0,25,5,Cotton,Woven,150,0.8,Spray,0.87
+Permethrin,CC(C)=CCC=C(C)C,4,204,0,0,25,5,Polyester,Knit,120,0.4,Spray,0.85
+Permethrin,CC(C)=CCC=C(C)C,4,204,0,0,25,5,Nylon,Woven,130,0.5,Spray,0.86
+Permethrin,CC(C)=CCC=C(C)C,4,204,0,0,25,5,Silk,Woven,90,0.6,Embedded,0.83
+Permethrin,CC(C)=CCC=C(C)C,4,204,0,0,25,5,Wool,Knit,140,0.7,Thick coating,0.84
+Permethrin,CC(C)=CCC=C(C)C,4,204,0,0,25,5,Linen,Woven,110,0.6,Spray,0.85
+Permethrin,CC(C)=CCC=C(C)C,4,204,0,0,25,5,Cotton-Blend,Knit,140,0.7,Spray,0.86
+Neem_Extract,CC1=CC2CCC1C2,3.3,136,0,0,16.8,2,Cotton,Woven,150,0.8,Spray,0.84
+Neem_Extract,CC1=CC2CCC1C2,3.3,136,0,0,16.8,2,Polyester,Knit,120,0.4,Spray,0.82
+Neem_Extract,CC1=CC2CCC1C2,3.3,136,0,0,16.8,2,Nylon,Woven,130,0.5,Spray,0.83
+Neem_Extract,CC1=CC2CCC1C2,3.3,136,0,0,16.8,2,Silk,Woven,90,0.6,Embedded,0.81
+Neem_Extract,CC1=CC2CCC1C2,3.3,136,0,0,16.8,2,Wool,Knit,140,0.7,Thick coating,0.82
+Neem_Extract,CC1=CC2CCC1C2,3.3,136,0,0,16.8,2,Linen,Woven,110,0.6,Spray,0.83
+Neem_Extract,CC1=CC2CCC1C2,3.3,136,0,0,16.8,2,Cotton-Blend,Knit,140,0.7,Spray,0.83
+Eucalyptus_Oil,CC1=CC=C(C=C1)O,2.7,164,1,2,29,4,Cotton,Woven,150,0.8,Spray,0.86
+Eucalyptus_Oil,CC1=CC=C(C=C1)O,2.7,164,1,2,29,4,Polyester,Knit,120,0.4,Spray,0.84
+Eucalyptus_Oil,CC1=CC=C(C=C1)O,2.7,164,1,2,29,4,Nylon,Woven,130,0.5,Spray,0.85
+Eucalyptus_Oil,CC1=CC=C(C=C1)O,2.7,164,1,2,29,4,Silk,Woven,90,0.6,Embedded,0.83
+Eucalyptus_Oil,CC1=CC=C(C=C1)O,2.7,164,1,2,29,4,Wool,Knit,140,0.7,Thick coating,0.84
+Eucalyptus_Oil,CC1=CC=C(C=C1)O,2.7,164,1,2,29,4,Linen,Woven,110,0.6,Spray,0.85
+Eucalyptus_Oil,CC1=CC=C(C=C1)O,2.7,164,1,2,29,4,Cotton-Blend,Knit,140,0.7,Spray,0.85
+Citral,CC(=O)C=CC1=CC=CC=C1,3,152,1,1,23.5,3,Cotton,Woven,150,0.8,Spray,0.84
+Citral,CC(=O)C=CC1=CC=CC=C1,3,152,1,1,23.5,3,Polyester,Knit,120,0.4,Spray,0.82
+Citral,CC(=O)C=CC1=CC=CC=C1,3,152,1,1,23.5,3,Nylon,Woven,130,0.5,Spray,0.83
+Citral,CC(=O)C=CC1=CC=CC=C1,3,152,1,1,23.5,3,Silk,Woven,90,0.6,Embedded,0.81
+Citral,CC(=O)C=CC1=CC=CC=C1,3,152,1,1,23.5,3,Wool,Knit,140,0.7,Thick coating,0.82
+Citral,CC(=O)C=CC1=CC=CC=C1,3,152,1,1,23.5,3,Linen,Woven,110,0.6,Spray,0.83
+Citral,CC(=O)C=CC1=CC=CC=C1,3,152,1,1,23.5,3,Cotton-Blend,Knit,140,0.7,Spray,0.83
+Geraniol,CC=CCC(C)=CC(C)O,3.1,154,1,1,20.5,5,Cotton,Woven,150,0.8,Spray,0.85
+Geraniol,CC=CCC(C)=CC(C)O,3.1,154,1,1,20.5,5,Polyester,Knit,120,0.4,Spray,0.83
+Geraniol,CC=CCC(C)=CC(C)O,3.1,154,1,1,20.5,5,Nylon,Woven,130,0.5,Spray,0.84
+Geraniol,CC=CCC(C)=CC(C)O,3.1,154,1,1,20.5,5,Silk,Woven,90,0.6,Embedded,0.82
+Geraniol,CC=CCC(C)=CC(C)O,3.1,154,1,1,20.5,5,Wool,Knit,140,0.7,Thick coating,0.83
+Geraniol,CC=CCC(C)=CC(C)O,3.1,154,1,1,20.5,5,Linen,Woven,110,0.6,Spray,0.84
+Geraniol,CC=CCC(C)=CC(C)O,3.1,154,1,1,20.5,5,Cotton-Blend,Knit,140,0.7,Spray,0.84
+Linalool,CC(C)=CCC=C(C)C(C)O,2.8,154,1,1,20.3,4,Cotton,Woven,150,0.8,Spray,0.84
+Linalool,CC(C)=CCC=C(C)C(C)O,2.8,154,1,1,20.3,4,Polyester,Knit,120,0.4,Spray,0.82
+Linalool,CC(C)=CCC=C(C)C(C)O,2.8,154,1,1,20.3,4,Nylon,Woven,130,0.5,Spray,0.83
+Linalool,CC(C)=CCC=C(C)C(C)O,2.8,154,1,1,20.3,4,Silk,Woven,90,0.6,Embedded,0.81
+Linalool,CC(C)=CCC=C(C)C(C)O,2.8,154,1,1,20.3,4,Wool,Knit,140,0.7,Thick coating,0.82
+Linalool,CC(C)=CCC=C(C)C(C)O,2.8,154,1,1,20.3,4,Linen,Woven,110,0.6,Spray,0.83
+Linalool,CC(C)=CCC=C(C)C(C)O,2.8,154,1,1,20.3,4,Cotton-Blend,Knit,140,0.7,Spray,0.83
+Camphor,CC1(C)C=CC2=C1C=CC(=O)C2,2.9,152,0,1,17,2,Cotton,Woven,150,0.8,Spray,0.83
+Camphor,CC1(C)C=CC2=C1C=CC(=O)C2,2.9,152,0,1,17,2,Polyester,Knit,120,0.4,Spray,0.81
+Camphor,CC1(C)C=CC2=C1C=CC(=O)C2,2.9,152,0,1,17,2,Nylon,Woven,130,0.5,Spray,0.82
+Camphor,CC1(C)C=CC2=C1C=CC(=O)C2,2.9,152,0,1,17,2,Silk,Woven,90,0.6,Embedded,0.8
+Camphor,CC1(C)C=CC2=C1C=CC(=O)C2,2.9,152,0,1,17,2,Wool,Knit,140,0.7,Thick coating,0.81
+Camphor,CC1(C)C=CC2=C1C=CC(=O)C2,2.9,152,0,1,17,2,Linen,Woven,110,0.6,Spray,0.82
+Camphor,CC1(C)C=CC2=C1C=CC(=O)C2,2.9,152,0,1,17,2,Cotton-Blend,Knit,140,0.7,Spray,0.82
+Tea_Tree_Oil,CC(C)C1=CC(=C(C=C1)O)C,2.7,136,1,1,18.5,3,Cotton,Woven,150,0.8,Spray,0.82
+Tea_Tree_Oil,CC(C)C1=CC(=C(C=C1)O)C,2.7,136,1,1,18.5,3,Polyester,Knit,120,0.4,Spray,0.8
+Tea_Tree_Oil,CC(C)C1=CC(=C(C=C1)O)C,2.7,136,1,1,18.5,3,Nylon,Woven,130,0.5,Spray,0.81
+Tea_Tree_Oil,CC(C)C1=CC(=C(C=C1)O)C,2.7,136,1,1,18.5,3,Silk,Woven,90,0.6,Embedded,0.79
+Tea_Tree_Oil,CC(C)C1=CC(=C(C=C1)O)C,2.7,136,1,1,18.5,3,Wool,Knit,140,0.7,Thick coating,0.8
+Tea_Tree_Oil,CC(C)C1=CC(=C(C=C1)O)C,2.7,136,1,1,18.5,3,Linen,Woven,110,0.6,Spray,0.81
+Tea_Tree_Oil,CC(C)C1=CC(=C(C=C1)O)C,2.7,136,1,1,18.5,3,Cotton-Blend,Knit,140,0.7,Spray,0.81
+Menthol,CC(C1CCC(C1)O)C,3,156,1,1,20.1,3,Cotton,Woven,150,0.8,Spray,0.81
+Menthol,CC(C1CCC(C1)O)C,3,156,1,1,20.1,3,Polyester,Knit,120,0.4,Spray,0.79
+Menthol,CC(C1CCC(C1)O)C,3,156,1,1,20.1,3,Nylon,Woven,130,0.5,Spray,0.8
+Menthol,CC(C1CCC(C1)O)C,3,156,1,1,20.1,3,Silk,Woven,90,0.6,Embedded,0.78
+Menthol,CC(C1CCC(C1)O)C,3,156,1,1,20.1,3,Wool,Knit,140,0.7,Thick coating,0.79
+Menthol,CC(C1CCC(C1)O)C,3,156,1,1,20.1,3,Linen,Woven,110,0.6,Spray,0.8
+Menthol,CC(C1CCC(C1)O)C,3,156,1,1,20.1,3,Cotton-Blend,Knit,140,0.7,Spray,0.8
