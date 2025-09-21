@@ -63,11 +63,74 @@ By integrating **cheminformatics descriptors**, **fabric/material properties**, 
 - **Reporting**: ReportLab  
 - **Storage**: SQLite  
 
-
+## ANN-InSilico-Mosquito-Repellent-Fabrics
+```
+├─ model_bioinfo.py        # Main ANN model
+├─ predict.py              # Script for new predictions
+├─ visualize_results.py    # Visualization scripts
+├─ input_data.csv          # Sample input data
+├─ requirements.txt        # Python dependencies
+├─ README.md
+└─ /outputs               # Folder for results and plots
+```
 
 ## ⚙️ Installation  
 
+**1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/ANN-InSilico-Mosquito-Repellent-Fabrics.git
+git clone https://github.com/KeerthanaReddySKR/ANN-InSilico-Mosquito-Repellent-Fabrics.git
+```
+**2. Navigate into the project folder**
+```bash
 cd ANN-InSilico-Mosquito-Repellent-Fabrics
+```
+**3. Install dependencies(Ensure you have Python (≥3.8) and pip installed. Then run:)**
+```bash
 pip install -r requirements.txt
+```
+**4. (Optional) Create a virtual environment**
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate it (Windows)
+venv\Scripts\activate
+
+# Activate it (Linux/Mac)
+source venv/bin/activate
+
+# Then install dependencies
+pip install -r requirements.txt
+```
+
+## 📈 Visualizations  
+
+The project includes several data visualizations for interpretation:  
+
+### 1️⃣ Bar Chart – Mean Repellency by Fabric  
+```python
+import plotly.express as px
+fig = px.bar(df, x="fabric", y="repellency", color="fabric",
+             title="Mean Repellency by Fabric", text_auto=".2f")
+fig.show() 
+```
+### 2️⃣ Scatter Plot – Repellency vs Bee Safety
+```python
+fig = px.scatter(df, x="repellency", y="bee_score", color="fabric",
+                 size="thickness", hover_data=["molecule","mw","logp"],
+                 title="Repellency vs Bee Safety")
+fig.show()
+```
+### 3️⃣ Histogram – Bee Safety Distribution
+```python
+fig = px.histogram(df, x="bee_score", color="bee_toxicity", nbins=20,
+                   title="Bee Safety Distribution")
+fig.show()
+```
+### 4️⃣ 3D Plot – Molecular Descriptor Space
+```python
+fig = px.scatter_3d(df, x="mw", y="logp", z="repellency",
+                    color="fabric", size="thickness",
+                    title="3D Molecular Space (MW, LogP, Repellency)")
+fig.show()
+```
