@@ -134,4 +134,5 @@ fig = px.scatter_3d(df, x="mw", y="logp", z="repellency",
                     title="3D Molecular Space (MW, LogP, Repellency)")
 fig.show()
 ```
+![image_alt](https://github.com/KeerthanaReddySKR/ANN-InSilico-Mosquito-Repellent-Fabrics/blob/main/Images/Prediction.png?raw=true)
 ![image_alt](https://github.com/KeerthanaReddySKR/ANN-InSilico-Mosquito-Repellent-Fabrics/blob/main/Images/Database.png?raw=true)
