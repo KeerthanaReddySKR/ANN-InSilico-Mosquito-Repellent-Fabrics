@@ -25,7 +25,7 @@ molecule_list = [
 ]
 
 
-# ---------------- MOLECULE FEATURES ----------------
+# ---------------- FEATURE EXTRACTION ----------------
 def mol_to_features(smiles, radius=2, nBits=128):
     mol = Chem.MolFromSmiles(smiles)
 
@@ -46,7 +46,7 @@ def mol_to_features(smiles, radius=2, nBits=128):
     return np.zeros((nBits + 5,))
 
 
-# ---------------- NAME TO SMILES ----------------
+# ---------------- NAME → SMILES ----------------
 def name_to_smiles(name):
     try:
         compound = pcp.get_compounds(name, "name")
@@ -81,7 +81,7 @@ def predict_repellency(molecule_input, fabric, density, absorbency):
 
     score = float(model.predict(X_scaled)[0][0])
 
-    # Ensure 0–1 range
+    # Ensure bounded output
     score = max(0, min(1, score))
 
     return smiles, score
@@ -89,7 +89,11 @@ def predict_repellency(molecule_input, fabric, density, absorbency):
 
 # ---------------- STREAMLIT UI ----------------
 st.title("🦟 ANN-Based Mosquito Repellent Predictor")
-st.write("Research-grade in silico prediction of repellency effectiveness.")
+
+st.write(
+    "Predict mosquito-repellent effectiveness of chemical compounds on "
+    "different fabric types using a machine learning model."
+)
 
 
 st.sidebar.header("User Input")
@@ -118,7 +122,7 @@ if st.sidebar.button("Predict"):
     )
 
     if smiles is None:
-        st.error("Molecule data not found.")
+        st.error("Molecule data not found in PubChem.")
     else:
         st.subheader("Prediction Result")
 
@@ -126,13 +130,13 @@ if st.sidebar.button("Predict"):
         st.write(f"**SMILES:** {smiles}")
         st.write(f"**Repellency Score:** {score:.2f}")
 
-        # Interpretation
+        # Scientific interpretation
         if score >= 0.75:
-            st.success("High repellency")
-        elif score >= 0.5:
-            st.warning("Moderate repellency")
+            st.success("High predicted repellency potential")
+        elif score >= 0.45:
+            st.warning("Moderate predicted repellency potential")
         else:
-            st.error("Low repellency")
+            st.error("Low predicted repellency potential")
 
         # Fabric comparison
         st.subheader("Repellency Across Fabrics")
@@ -154,6 +158,20 @@ if st.sidebar.button("Predict"):
             "Repellency": scores
         })
 
-        fig = px.bar(df_plot, x="Fabric", y="Repellency")
+        fig = px.bar(
+            df_plot,
+            x="Fabric",
+            y="Repellency",
+            title="Comparative Repellency Across Fabric Types"
+        )
+
         st.plotly_chart(fig)
 
+
+# ---------------- DISCLAIMER FOOTER ----------------
+st.markdown("---")
+st.caption(
+    "This tool provides in silico predictions based on an Artificial Neural "
+    "Network trained using physicochemical descriptors of repellent compounds. "
+    "Results represent computational estimates and do not replace experimental validation."
+)
