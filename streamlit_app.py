@@ -9,15 +9,16 @@ import pubchempy as pcp
 import plotly.express as px
 
 
-# ---------------- Load Model + Encoders ----------------
-model = load_model("model_bioinfo.h5")
+# ---------- LOAD MODEL SAFELY ----------
+model = load_model("model_bioinfo.h5", compile=False)
 ohe = joblib.load("ohe_fabric.pkl")
 scaler = joblib.load("scaler.pkl")
 
 
-# ---------------- Molecule Features ----------------
+# ---------- MOLECULAR FEATURES ----------
 def mol_to_features(smiles, radius=2, nBits=128):
     mol = Chem.MolFromSmiles(smiles)
+
     if mol:
         fp = AllChem.GetMorganFingerprintAsBitVect(mol, radius, nBits=nBits)
         fp_arr = np.array(fp)
@@ -31,11 +32,11 @@ def mol_to_features(smiles, radius=2, nBits=128):
         ]
 
         return np.concatenate([fp_arr, np.array(desc)])
-    else:
-        return np.zeros((nBits + 5,))
+
+    return np.zeros((nBits + 5,))
 
 
-# ---------------- Name → SMILES ----------------
+# ---------- NAME → SMILES ----------
 def name_to_smiles(name):
     try:
         compound = pcp.get_compounds(name, 'name')
@@ -46,10 +47,10 @@ def name_to_smiles(name):
     return None
 
 
-# ---------------- Prediction ----------------
+# ---------- PREDICTION FUNCTION ----------
 def predict_repellency(molecule_input, fabric, density, absorbency):
 
-    # Convert molecule name to SMILES if needed
+    # Convert name to SMILES if needed
     if Chem.MolFromSmiles(molecule_input):
         smiles = molecule_input
     else:
@@ -63,7 +64,9 @@ def predict_repellency(molecule_input, fabric, density, absorbency):
 
     fabric_props = np.array([density, absorbency]).reshape(1, -1)
 
-    X = np.hstack([mol_features.reshape(1, -1), fabric_ohe, fabric_props])
+    X = np.hstack([mol_features.reshape(1, -1),
+                   fabric_ohe,
+                   fabric_props])
 
     X_scaled = scaler.transform(X)
 
@@ -72,23 +75,24 @@ def predict_repellency(molecule_input, fabric, density, absorbency):
     return smiles, score
 
 
-# ---------------- Streamlit UI ----------------
+# ---------- STREAMLIT UI ----------
 st.title("🦟 ANN-Based Mosquito Repellent Predictor")
-st.write("Predict repellency effectiveness of compounds on fabrics using ANN.")
+st.write("Predict repellency effectiveness of compounds on fabrics.")
 
 
 st.sidebar.header("User Input")
 
 molecule_input = st.sidebar.text_input(
-    "Enter Molecule (Name or SMILES)", "DEET"
+    "Enter Molecule (Name or SMILES)",
+    "DEET"
 )
 
 fabric = st.sidebar.selectbox(
-    "Select Fabric", ohe.categories_[0].tolist()
+    "Select Fabric",
+    ohe.categories_[0].tolist()
 )
 
 density = st.sidebar.slider("Fabric Density", 50, 300, 150)
-
 absorbency = st.sidebar.slider("Absorbency", 0.0, 1.0, 0.5)
 
 
@@ -114,7 +118,7 @@ if st.sidebar.button("Predict"):
         else:
             st.error("Low repellency")
 
-        # Comparison across fabrics
+        # Comparison plot
         st.subheader("Repellency Across Fabrics")
 
         scores = []
@@ -122,7 +126,10 @@ if st.sidebar.button("Predict"):
 
         for f in fabrics:
             _, s = predict_repellency(
-                molecule_input, f, density, absorbency
+                molecule_input,
+                f,
+                density,
+                absorbency
             )
             scores.append(s)
 
