@@ -10,7 +10,7 @@ import plotly.express as px
 
 
 # ---------------- LOAD MODEL ----------------
-model = load_model("model_bioinfo.keras", compile=False)
+model = load_model("model_bioinfo.h5", compile=False)
 ohe = joblib.load("ohe_fabric.pkl")
 scaler = joblib.load("scaler.pkl")
 
@@ -156,3 +156,4 @@ if st.sidebar.button("Predict"):
 
         fig = px.bar(df_plot, x="Fabric", y="Repellency")
         st.plotly_chart(fig)
+
